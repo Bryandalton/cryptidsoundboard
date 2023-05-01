@@ -3,8 +3,8 @@ import React from "react";
 function cryptidCard () {
     return(
         <div>
-            <img></img>
-            <p></p>
+            <img ref={'../../assets/images/bigfoot.jpg'}></img>
+            <p>Bigfoot</p>
         </div>
     )
 }
