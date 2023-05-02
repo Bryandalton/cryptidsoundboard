@@ -1,23 +1,22 @@
 import { useState } from "react";
-import cryptidCard from "./pages/components/cryptidCard";
+import CryptidCard from "./pages/components/cryptidCard";
+import { cryptidData } from './assets/data'
 import "./App.css";
+import { SoundButtons } from "./pages/soundButtons";
+console.log(cryptidData)
+
 
 function App() {
   const [count, setCount] = useState(0);
 
   return (
     <>
-      <main>
+      <div>
         <aside className="cryptidBoard">
-          <cryptidCard />
+          <CryptidCard />
         </aside>
-        <section className="soundBoard">
-          <button>Button</button>
-          <button>Button</button>
-          <button>Button</button>
-          <button>Button</button>
-        </section>
-      </main>
+        <SoundButtons/>
+      </div>
     </>
   );
 }
