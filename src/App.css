@@ -39,11 +39,12 @@ body {
   }
 }
 
+
 .cryptidBoard {
   float: left;
   position: fixed;
   height: 100vh;
-  width: 40vh;
+  width: 20vw;
   border-right: white solid 2px;
   padding: 1rem;
 }

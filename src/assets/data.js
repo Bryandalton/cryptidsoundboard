@@ -1,7 +1,5 @@
 export const cryptidData = 
 {
-    "buttons": ["rawr","grr","whoop","reasonable", "fart", "hungry"]
+    "buttons": ["rawr","grr","whoop","reasonable", "fart", "hungry"],
+    "sounds" : []
 }
-
-
-// export default cryptidData

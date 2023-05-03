@@ -6,7 +6,8 @@ const StyledCard = styled.div`
   color: white; /*temp*/
   border-radius: 1rem;
   margin: 0 auto;
-  width: 50%;
+  max-width: 50%;
+  min-width: 30%;
 
   p {
     font-size: 2em;
@@ -16,6 +17,12 @@ const StyledCard = styled.div`
   img {
     max-width: 100%;
     border-radius: 1rem;
+  }
+
+  @media (max-width: 980px) {
+    p {
+      font-size: 1.5em;
+    }
   }
 `;
 function CryptidCard() {
