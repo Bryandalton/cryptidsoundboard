@@ -1,13 +1,14 @@
 import React from "react";
 import styled from "styled-components";
 
-const StyledCard = styled.div`
+const StyledCard = styled.button`
   border: white 1px solid;
   color: white; /*temp*/
   border-radius: 1rem;
   margin: 0 auto;
-  max-width: 50%;
-  min-width: 30%;
+  width: 50%;
+  pointer-events: all;
+  background-color: black;
 
   p {
     font-size: 2em;
@@ -25,11 +26,11 @@ const StyledCard = styled.div`
     }
   }
 `;
-function CryptidCard() {
+function CryptidCard({image, name}) {
   return (
     <StyledCard>
-      <img src="./images/bigfoot.JPG"></img>
-      <p>Bigfoot</p>
+      <img src={image}></img>
+      <p>{name}</p>
     </StyledCard>
   );
 }

@@ -1,8 +1,6 @@
-import { cryptidData } from "../assets/data";
 import styled from "styled-components";
 import SoundButton from "./components/soundButton";
 
-console.log(cryptidData);
 
 const SoundBoard = styled.section`
   display: grid;
@@ -16,10 +14,10 @@ const SoundBoard = styled.section`
     grid-template-columns: 15rem;
   }
 `;
-export function SoundButtons() {
+export function SoundButtons({sounds}) {
   return (
     <SoundBoard>
-      {cryptidData.buttons.map((buttonText, idx) => {
+      {sounds.map((buttonText, idx) => {
         return <SoundButton key={idx} label={buttonText}/>
       })}
     </SoundBoard>
