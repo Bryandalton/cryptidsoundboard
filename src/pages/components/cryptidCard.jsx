@@ -26,9 +26,9 @@ const StyledCard = styled.button`
     }
   }
 `;
-function CryptidCard({image, name}) {
+function CryptidCard({image, name, onClick}) {
   return (
-    <StyledCard>
+    <StyledCard onClick={onClick}>
       <img src={image}></img>
       <p>{name}</p>
     </StyledCard>

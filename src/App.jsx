@@ -3,7 +3,20 @@ import CryptidCard from "./pages/components/cryptidCard";
 import { cryptidData } from "./assets/data";
 import "./App.css";
 import { SoundButtons } from "./pages/soundButtons";
+import styled from "styled-components";
 console.log(cryptidData);
+
+const CryptidBoard = styled.aside`
+  float: left;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  height: 100vh;
+  width: 20vw;
+  border-right: white solid 2px;
+  padding: 1rem;
+`;
 
 function App() {
   const [count, setCount] = useState(0);
@@ -11,16 +24,20 @@ function App() {
   return (
     <>
       <div>
-        <aside className="cryptidBoard">
+        <CryptidBoard className="cryptidBoard">
           {cryptidData.cryptids.map((cryptid) => {
-            return <CryptidCard
-              key={cryptid.name} 
-              image={cryptid.image} 
-              name={cryptid.name} 
-              onclick={()=>{console.log("click")}}
-              />;
+            return (
+              <CryptidCard
+                key={cryptid.name}
+                image={cryptid.image}
+                name={cryptid.name}
+                onClick={() => {
+                  console.log("click");
+                }}
+              />
+            );
           })}
-        </aside>
+        </CryptidBoard>
 
         <SoundButtons sounds={cryptidData.cryptids[currentCryptid].sounds} />
       </div>
