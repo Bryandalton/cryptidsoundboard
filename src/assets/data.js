@@ -14,8 +14,15 @@ const mothman =
     "sounds": ["rawr"],
 }
 
+const jerseydevil = 
+{
+    "name": "Jersey Devil",
+    "images": "./images/jerseydevil.jpg",
+    "sounds": ["Wee-Snaw"]
+}
+
 
 export const cryptidData = 
 { 
-    "cryptids": [sasquach, mothman],
+    "cryptids": [sasquach, mothman, jerseydevil],
 }
