@@ -3,11 +3,11 @@ import SoundButton from "./components/soundButton";
 
 
 const SoundBoard = styled.section`
+  height: 80vh;
   display: grid;
   justify-content: center;
-  align-items: center;
+  align-content: center;
   grid-template-columns: 15rem 15rem;
-  padding: 5rem;
   gap: 3rem;
   margin-left: 20vw;
   @media (max-width: 768px) {
