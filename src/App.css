@@ -1,11 +1,12 @@
-:root{
+:root {
   --grn-neon: #20cc00;
   --blk-bg: hsl(323 21% 16%);
+  --red-neon: #eb3f62;
 }
 
 #root {
   width: 100vw;
-height: 100vh;
+  height: 100vh;
   margin: 0 auto;
   /* padding: 2rem; */
   text-align: center;

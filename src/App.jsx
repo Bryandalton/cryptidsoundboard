@@ -19,27 +19,33 @@ const CryptidBoard = styled.aside`
 `;
 
 function App() {
-  const [count, setCount] = useState(0);
-  const currentCryptid = 0;
+  const [currentCryptid, setCryptid] = useState(0);
+  const [cryptidName, setName] = useState("Sasquach")
+  const [theme, setTheme] = useState("green")
+
   return (
     <>
+    <h1>{`${cryptidName} Sound Board`}</h1>
       <div>
         <CryptidBoard className="cryptidBoard">
-          {cryptidData.cryptids.map((cryptid) => {
+          {cryptidData.cryptids.map((cryptid, idx) => {
             return (
               <CryptidCard
                 key={cryptid.name}
                 image={cryptid.image}
                 name={cryptid.name}
                 onClick={() => {
-                  console.log("click");
+                  console.log("click", cryptid);
+                  setName(cryptid.name)
+                  setTheme(cryptid.theme)
+                  setCryptid(idx)
                 }}
               />
             );
           })}
         </CryptidBoard>
 
-        <SoundButtons sounds={cryptidData.cryptids[currentCryptid].sounds} />
+        <SoundButtons theme = {theme} sounds={cryptidData.cryptids[currentCryptid].sounds} />
       </div>
     </>
   );
