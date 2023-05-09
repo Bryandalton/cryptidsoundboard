@@ -20,12 +20,10 @@ const CryptidBoard = styled.aside`
 
 function App() {
   const [currentCryptid, setCryptid] = useState(0);
-  const [cryptidName, setName] = useState("Sasquach")
-  const [theme, setTheme] = useState("green")
-
+  const curCryptid = cryptidData.cryptids[currentCryptid]
   return (
     <>
-    <h1>{`${cryptidName} Sound Board`}</h1>
+    <h1>{`${curCryptid.name} Sound Board`}</h1>
       <div>
         <CryptidBoard className="cryptidBoard">
           {cryptidData.cryptids.map((cryptid, idx) => {
@@ -35,9 +33,6 @@ function App() {
                 image={cryptid.image}
                 name={cryptid.name}
                 onClick={() => {
-                  console.log("click", cryptid);
-                  setName(cryptid.name)
-                  setTheme(cryptid.theme)
                   setCryptid(idx)
                 }}
               />
@@ -45,7 +40,7 @@ function App() {
           })}
         </CryptidBoard>
 
-        <SoundButtons theme = {theme} sounds={cryptidData.cryptids[currentCryptid].sounds} />
+        <SoundButtons theme = {curCryptid.theme} buttons={curCryptid.buttons} />
       </div>
     </>
   );

@@ -14,11 +14,11 @@ const SoundBoard = styled.section`
     grid-template-columns: 15rem;
   }
 `;
-export function SoundButtons({sounds, theme}) {
+export function SoundButtons({buttons, theme}) {
   return (
     <SoundBoard className={`theme-${theme}`}>
-      {sounds.map((buttonText, idx) => {
-        return <SoundButton key={idx} label={buttonText}/>
+      {buttons.map((button, idx) => {
+        return <SoundButton key={idx} label={button.label} sound={button.sound}/>
       })}
     </SoundBoard>
   );
