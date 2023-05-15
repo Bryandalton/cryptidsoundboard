@@ -38,7 +38,7 @@ const StyledButton = styled.button`
       color: hsl(323 21% 16%);
       text-shadow: none;
     }
-  }
+  }  
 `;
 
 function SoundButton({ label, sound }) {
