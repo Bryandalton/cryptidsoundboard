@@ -5,12 +5,12 @@ const sasquach = {
   theme: "green",
   buttons: [
     {
-      label: "Rawr",
-      sound: "snd_explosion",
+      label: "Growl",
+      sound: "bigfootgrowl",
     },
     {
-      label: "Growl",
-      sound: "snd_beep",
+      label: "Howl",
+      sound: "bigfoothowl",
     },
   ],
 };
