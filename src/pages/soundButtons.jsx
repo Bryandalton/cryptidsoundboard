@@ -1,9 +1,10 @@
 import styled from "styled-components";
 import SoundButton from "./components/soundButton";
 
+const SoundPanel = styled.section`
 
-const SoundBoard = styled.section`
-  height: 80vh;
+`
+const SoundBoard = styled.div`
   display: grid;
   justify-content: center;
   align-content: center;
@@ -14,12 +15,24 @@ const SoundBoard = styled.section`
     grid-template-columns: 15rem;
   }
 `;
-export function SoundButtons({buttons, theme}) {
+const BoardName = styled.h1`
+  color: var(--grn-neon);
+  text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.5), 0 0 0.5em currentcolor;
+
+  .theme-red & {
+    color: var(--red-neon);
+    text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.5), 0 0 0.5em currentcolor;
+  }
+`;
+export function SoundButtons({cryptid}) {
   return (
-    <SoundBoard className={`theme-${theme}`}>
-      {buttons.map((button, idx) => {
+    <SoundPanel className={`theme-${cryptid.theme}`}>
+     <BoardName>{`${cryptid.name} Sound Board`}</BoardName>
+    <SoundBoard>
+      {cryptid.buttons.map((button, idx) => {
         return <SoundButton key={idx} label={button.label} sound={button.sound}/>
       })}
     </SoundBoard>
+    </SoundPanel>
   );
 }

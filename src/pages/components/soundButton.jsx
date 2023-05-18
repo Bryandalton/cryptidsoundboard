@@ -1,12 +1,7 @@
 import styled from "styled-components";
-import soundEx from "../../assets/sounds/snd_explosion.wav";
-import soundBeep from "../../assets/sounds/snd_beep.wav";
+import SoundMap from '../../soundMap'
 import { useState } from "react";
 
-const soundLookup = {
-  "snd_explosion": soundEx,
-  "snd_beep": soundBeep,
-}
 
 const StyledButton = styled.button`
   color: var(--grn-neon);
@@ -42,9 +37,11 @@ const StyledButton = styled.button`
 `;
 
 function SoundButton({ label, sound }) {
-  const [audio] = useState(new Audio(soundLookup[sound]));
+  const [audio] = useState(new Audio(SoundMap(sound)));
+  window.test = audio
   function playSound() {
     console.log(sound)
+    console.log(SoundMap[sound])
     audio.play();
   }
 

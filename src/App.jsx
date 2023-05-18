@@ -18,15 +18,7 @@ const CryptidBoard = styled.aside`
   padding: 1rem;
 `;
 
-const BoardName = styled.h1`
-  color: var(--grn-neon);
-  text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.5), 0 0 0.5em currentcolor;
 
-  .theme-red & {
-    color: var(--red-neon);
-    text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.5), 0 0 0.5em currentcolor;
-  }
-`;
 
 function App() {
   const [currentCryptid, setCryptid] = useState(0);
@@ -48,8 +40,7 @@ function App() {
             );
           })}
         </CryptidBoard>
-        <BoardName theme={curCryptid.theme}>{`${curCryptid.name} Sound Board`}</BoardName>
-        <SoundButtons theme={curCryptid.theme} buttons={curCryptid.buttons} />
+        <SoundButtons cryptid={curCryptid} />
       </div>
     </>
   );
