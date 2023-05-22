@@ -1,7 +1,7 @@
 const sasquach = {
   name: "Sasquach",
   image: "./images/bigfoot.JPG",
-  sounds: ["rawr", "grr", "whoop", "reasonable", "fart", "hungry"],
+  // sounds: ["rawr", "grr", "whoop", "reasonable", "fart", "hungry"],
   theme: "green",
   buttons: [
     {
@@ -22,8 +22,12 @@ const mothman = {
   theme: "red",
   buttons: [
     {
-      label: "Rawr",
-      sound: "snd_explosion",
+      label: "Noise",
+      sound: "Mothman",
+    },
+    {
+      label: "Wings",
+      sound: "mothmanwingflap",
     },
   ],
 };
@@ -32,11 +36,11 @@ const jerseydevil = {
   name: "Jersey Devil",
   images: "./images/jerseydevil.jpg",
   sounds: ["Wee-Snaw"],
-  theme: "red",
+  theme: "blue",
   buttons: [
     {
-      label: "Wee-Snaw",
-      sound: "snd_explosion",
+      label: "Breath",
+      sound: "jerseydevil",
     },
   ],
 };

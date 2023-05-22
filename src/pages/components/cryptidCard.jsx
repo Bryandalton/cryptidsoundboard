@@ -2,6 +2,8 @@ import React from "react";
 import styled from "styled-components";
 
 const StyledCard = styled.button`
+  display: flex;
+  flex-direction: column;
   border: white 1px solid;
   color: white; /*temp*/
   border-radius: 1rem;
@@ -11,7 +13,10 @@ const StyledCard = styled.button`
   background-color: black;
 
   p {
+    flex: 1 1 auto;
     font-size: 2em;
+    min-width: 0;
+    min-height: 0;
     margin: 0;
   }
 
@@ -26,7 +31,7 @@ const StyledCard = styled.button`
     }
   }
 `;
-function CryptidCard({image, name, onClick}) {
+function CryptidCard({ image, name, onClick }) {
   return (
     <StyledCard onClick={onClick}>
       <img src={image}></img>

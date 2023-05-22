@@ -33,7 +33,19 @@ const StyledButton = styled.button`
       color: hsl(323 21% 16%);
       text-shadow: none;
     }
-  }  
+  }
+  .theme-blue &{
+    color: var(--blue-neon);
+    background-color: hsl(323 21% 16%);
+    border: var(--blue-neon) 0.125em solid;
+    text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.5), 0 0 0.5em currentcolor;
+    box-shadow: inset 0 0 0.5em 0 var(--blue-neon), 0 0 0.5em 0 var(--blue-neon);
+    &:hover {
+      background: var(--blue-neon);
+      color: hsl(323 21% 16%);
+      text-shadow: none;
+  } 
+  }
 `;
 
 function SoundButton({ label, sound }) {
