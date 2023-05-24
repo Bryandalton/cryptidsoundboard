@@ -1,7 +1,7 @@
 import styled from "styled-components";
-import SoundMap from '../../soundMap'
+// import SoundMap from "../../soundMap";
 import { useState } from "react";
-
+import { getSound, playSound } from "../../soundMap";
 
 const StyledButton = styled.button`
   color: var(--grn-neon);
@@ -34,7 +34,7 @@ const StyledButton = styled.button`
       text-shadow: none;
     }
   }
-  .theme-blue &{
+  .theme-blue & {
     color: var(--blue-neon);
     background-color: hsl(323 21% 16%);
     border: var(--blue-neon) 0.125em solid;
@@ -44,20 +44,19 @@ const StyledButton = styled.button`
       background: var(--blue-neon);
       color: hsl(323 21% 16%);
       text-shadow: none;
-  } 
+    }
   }
 `;
 
 function SoundButton({ label, sound }) {
-  const [audio] = useState(new Audio(SoundMap(sound)));
-  window.test = audio
-  function playSound() {
-    console.log(sound)
-    console.log(SoundMap[sound])
-    audio.play();
+  // const [audio] = useState(new Audio(getSound(sound)));
+  function playButtonSound() {
+    // audio.play();
+    console.log('play', sound)
+    playSound(sound)
   }
 
-  return <StyledButton onClick={playSound}>{label}</StyledButton>;
+  return <StyledButton onClick={playButtonSound}>{label}</StyledButton>;
 }
 
 export default SoundButton;
