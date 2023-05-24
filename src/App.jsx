@@ -1,9 +1,10 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import CryptidCard from "./pages/components/cryptidCard";
 import { cryptidData } from "./assets/data";
 import "./App.css";
 import { SoundButtons } from "./pages/soundButtons";
 import styled from "styled-components";
+import { preloadAllSounds } from './soundMap';
 console.log(cryptidData);
 
 const CryptidBoard = styled.aside`
@@ -19,8 +20,15 @@ const CryptidBoard = styled.aside`
 `;
 
 
-
 function App() {
+  // useEffect is a special react hook that compares a change in state
+  // when providing an empty dependency param (the "[]"), its a secret
+  // command that basically says "only run this code once, when 
+  // this component (App) mounts"
+  useEffect(() => {
+    preloadAllSounds();
+  }, []);
+
   const [currentCryptid, setCryptid] = useState(0);
   const curCryptid = cryptidData.cryptids[currentCryptid];
   return (

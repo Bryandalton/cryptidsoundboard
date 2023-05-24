@@ -1,7 +1,7 @@
 import styled from "styled-components";
 // import SoundMap from "../../soundMap";
 import { useState } from "react";
-import { getSound, playSound } from "../../soundMap";
+import { playSound } from "../../soundMap";
 
 const StyledButton = styled.button`
   color: var(--grn-neon);
@@ -49,11 +49,8 @@ const StyledButton = styled.button`
 `;
 
 function SoundButton({ label, sound }) {
-  // const [audio] = useState(new Audio(getSound(sound)));
   function playButtonSound() {
-    // audio.play();
-    console.log('play', sound)
-    playSound(sound)
+    playSound(sound);
   }
 
   return <StyledButton onClick={playButtonSound}>{label}</StyledButton>;
