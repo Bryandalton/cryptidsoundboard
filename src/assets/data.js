@@ -1,7 +1,6 @@
-const sasquach = {
-  name: "Sasquach",
+const sasquatch = {
+  name: "Sasquatch",
   image: "./images/bigfoot.JPG",
-  // sounds: ["rawr", "grr", "whoop", "reasonable", "fart", "hungry"],
   theme: "green",
   buttons: [
     {
@@ -46,5 +45,5 @@ const jerseydevil = {
 };
 
 export const cryptidData = {
-  cryptids: [sasquach, mothman, jerseydevil],
+  cryptids: [sasquatch, mothman, jerseydevil],
 };
