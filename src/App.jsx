@@ -27,7 +27,7 @@ function App() {
   const curCryptid = cryptidData.cryptids[currentCryptid];
   return (
     <>
-      <div>
+      <div style={{'flex': 1}}>
         <CryptidBoard className="cryptidBoard">
           {cryptidData.cryptids.map((cryptid, idx) => {
             return (

@@ -15,8 +15,6 @@ const StyledCard = styled.button`
   p {
     flex: 1 1 auto;
     font-size: 2em;
-    min-width: 0;
-    min-height: 0;
     margin: 0;
   }
 
@@ -27,7 +25,7 @@ const StyledCard = styled.button`
 
   @media (max-width: 980px) {
     p {
-      font-size: 1.5em;
+      font-size: 1em;
     }
   }
 `;
