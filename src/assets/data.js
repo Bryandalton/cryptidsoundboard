@@ -34,7 +34,7 @@ const mothman = {
 
 const jerseydevil = {
   name: "Jersey Devil",
-  images: "./images/jerseydevil.jpg",
+  image: "./images/jerseydevil.jpg",
   sounds: ["Wee-Snaw"],
   theme: "blue",
   buttons: [

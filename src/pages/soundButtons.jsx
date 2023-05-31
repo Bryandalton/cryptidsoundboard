@@ -1,9 +1,7 @@
 import styled from "styled-components";
 import SoundButton from "./components/soundButton";
 
-const SoundPanel = styled.section`
-
-`;
+const SoundPanel = styled.section``;
 const SoundBoard = styled.div`
   display: grid;
   justify-content: center;
@@ -18,7 +16,7 @@ const SoundBoard = styled.div`
 const BoardName = styled.h1`
   margin: 0;
   margin-left: 20vw;
-  padding:  4rem 0  4rem 0;
+  padding: 4rem 0 4rem 0;
   color: var(--grn-neon);
   text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.5), 0 0 0.5em currentcolor;
 
@@ -26,7 +24,7 @@ const BoardName = styled.h1`
     color: var(--red-neon);
     text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.5), 0 0 0.5em currentcolor;
   }
-  .theme-blue &{
+  .theme-blue & {
     color: var(--blue-neon);
     text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.5), 0 0 0.5em currentcolor;
   }
