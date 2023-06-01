@@ -2,32 +2,29 @@ import React from "react";
 import styled from "styled-components";
 
 const StyledCard = styled.button`
-  display: flex;
-  flex-direction: column;
   border: white 1px solid;
-  color: white; /*temp*/
+  width: 50%;
+  color: white;
   border-radius: 1rem;
   margin: 0 auto;
-  width: 50%;
   pointer-events: all;
   background-color: black;
+  @media (max-width: 1730px){
+    width:100%
+  }
 
   p {
     flex: 1 1 auto;
-    font-size: 2em;
     margin: 0;
+    font-size: clamp(.1rem, 2vw, 2rem);
+
   }
 
   img {
-    max-width: 100%;
+    width: clamp(50%, 100%, 100%);
     border-radius: 1rem;
   }
 
-  @media (max-width: 980px) {
-    p {
-      font-size: 1em;
-    }
-  }
 `;
 function CryptidCard({ image, name, onClick }) {
   return (

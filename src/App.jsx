@@ -17,6 +17,7 @@ const CryptidBoard = styled.aside`
   width: 20vw;
   border-right: white solid 2px;
   padding: 1rem;
+  overflow: scroll;
 `;
 
 function App() {
@@ -27,7 +28,7 @@ function App() {
   const curCryptid = cryptidData.cryptids[currentCryptid];
   return (
     <>
-      <div style={{'flex': 1}}>
+      <div style={{flex: 1, overflow: 'hidden'}}>
         <CryptidBoard className="cryptidBoard">
           {cryptidData.cryptids.map((cryptid, idx) => {
             return (

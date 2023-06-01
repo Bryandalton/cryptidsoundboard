@@ -6,7 +6,7 @@ const SoundBoard = styled.div`
   display: grid;
   justify-content: center;
   align-content: center;
-  grid-template-columns: 15rem 15rem;
+  grid-template-columns: repeat(2, 15rem);
   gap: 3rem;
   margin-left: 20vw;
   @media (max-width: 768px) {
