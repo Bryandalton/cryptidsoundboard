@@ -17,7 +17,6 @@ const CryptidBoard = styled.aside`
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  height: 100vh;
   width: 20vw;
   border-right: white solid 2px;
   padding: 1rem;

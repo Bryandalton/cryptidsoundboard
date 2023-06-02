@@ -3,6 +3,7 @@ import SoundButton from "./components/soundButton";
 
 const SoundPanel = styled.section`
   flex:1;
+  overflow-y: auto;
 `;
 const SoundBoard = styled.div`
   display: grid;
