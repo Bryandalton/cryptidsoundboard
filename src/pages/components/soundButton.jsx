@@ -3,6 +3,7 @@ import { playSound } from "../../soundMap";
 
 const StyledButton = styled.button`
   color: var(--grn-neon);
+  margin: 1rem;
   background-color: hsl(323 21% 16%);
   border: var(--grn-neon) 0.125em solid;
   text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.5), 0 0 0.5em currentcolor;

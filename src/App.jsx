@@ -7,9 +7,13 @@ import styled from "styled-components";
 import { preloadAllSounds } from "./soundMap";
 console.log(cryptidData);
 
+const PageWrapper = styled.div`
+  display: flex;
+  position: absolute;
+  inset: 0;
+`;
+
 const CryptidBoard = styled.aside`
-  float: left;
-  position: fixed;
   display: flex;
   flex-direction: column;
   gap: 2rem;
@@ -17,7 +21,7 @@ const CryptidBoard = styled.aside`
   width: 20vw;
   border-right: white solid 2px;
   padding: 1rem;
-  overflow: scroll;
+  overflow-y: auto;
 `;
 
 function App() {
@@ -28,7 +32,7 @@ function App() {
   const curCryptid = cryptidData.cryptids[currentCryptid];
   return (
     <>
-      <div style={{flex: 1, overflow: 'hidden'}}>
+      <PageWrapper>
         <CryptidBoard className="cryptidBoard">
           {cryptidData.cryptids.map((cryptid, idx) => {
             return (
@@ -44,7 +48,7 @@ function App() {
           })}
         </CryptidBoard>
         <SoundButtons cryptid={curCryptid} />
-      </div>
+      </PageWrapper>
     </>
   );
 }

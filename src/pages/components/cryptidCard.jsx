@@ -3,10 +3,11 @@ import styled from "styled-components";
 
 const StyledCard = styled.button`
   border: white 1px solid;
-  width: 50%;
+  width: 60%;
   color: white;
+  margin: 0 auto; //at largest break point centers the cards
   border-radius: 1rem;
-  margin: 0 auto;
+  padding: .5rem 1rem;
   pointer-events: all;
   background-color: black;
   @media (max-width: 1730px){
@@ -22,7 +23,7 @@ const StyledCard = styled.button`
 
   img {
     width: clamp(50%, 100%, 100%);
-    border-radius: 1rem;
+    border-radius: .5rem;
   }
 
 `;
