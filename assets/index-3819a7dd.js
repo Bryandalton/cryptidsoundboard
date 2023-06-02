@@ -118,6 +118,7 @@ Error generating stack: `+o.message+`
   }
 `;function _m({label:e,sound:t}){function n(){xm(t)}return Pe.jsx(Em,{onClick:n,children:e})}const Pm=an.section`
   flex:1;
+  overflow-y: auto;
 `,Nm=an.div`
   display: grid;
   justify-content: center;
@@ -149,7 +150,6 @@ Error generating stack: `+o.message+`
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  height: 100vh;
   width: 20vw;
   border-right: white solid 2px;
   padding: 1rem;
