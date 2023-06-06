@@ -72,7 +72,7 @@ Error generating stack: `+o.message+`
     border-radius: .5rem;
   }
 
-`;function dm({image:e,name:t,onClick:n}){return Pe.jsxs(fm,{onClick:n,children:[Pe.jsx("img",{src:e}),Pe.jsx("p",{children:t})]})}const pm={name:"Sasquatch",image:"./images/bigfoot.JPG",theme:"green",buttons:[{label:"Growl",sound:"bigfootgrowl"},{label:"Howl",sound:"bigfoothowl"}]},hm={name:"Mothman",image:"./images/mothmancard.png",sounds:["rawr"],theme:"red",buttons:[{label:"Noise",sound:"Mothman"},{label:"Wings",sound:"mothmanwingflap"}]},mm={name:"Jersey Devil",image:"./images/jerseydevil.jpg",sounds:["Wee-Snaw"],theme:"blue",buttons:[{label:"Breath",sound:"jerseydevil"}]},Wi={cryptids:[pm,hm,mm]};const vm="/cryptidsoundboard/assets/bigfoothowl-55f56b60.wav",ym="/cryptidsoundboard/assets/bigfootgrowl-b1a96f3f.wav",gm="/cryptidsoundboard/assets/mothman-ad29de6e.mp3",wm="/cryptidsoundboard/assets/mothmanwingflap-13e98acd.mp3",Sm="/cryptidsoundboard/assets/jerseydevil-70828e13.mp3",Qi={bigfoothowl:vm,bigfootgrowl:ym,Mothman:gm,mothmanwingflap:wm,jerseydevil:Sm},Vl={},km=e=>{Qi[e]?Vl[e]=new Audio(Qi[e]):console.error(`loadSound: invalid soundId "${e}"`)},Cm=()=>{Object.keys(Qi).forEach(e=>{Vl[e]||km(e)})},xm=e=>{Vl[e]?Vl[e].play():console.error(`playSound: soundId not preloaded ${e}`)},Em=an.button`
+`;function dm({image:e,name:t,onClick:n}){return Pe.jsxs(fm,{onClick:n,children:[Pe.jsx("img",{src:e}),Pe.jsx("p",{children:t})]})}const pm={name:"Sasquatch",image:"./images/bigfoot.JPG",theme:"green",buttons:[{label:"Growl",sound:"bigfootgrowl"},{label:"Howl",sound:"bigfoothowl"}]},hm={name:"Mothman",image:"./images/mothmancard.png",sounds:["rawr"],theme:"red",buttons:[{label:"Noise",sound:"Mothman"},{label:"Wings",sound:"mothmanwingflap"}]},mm={name:"Jersey Devil",image:"./images/jerseydevil.jpg",sounds:["Wee-Snaw"],theme:"blue",buttons:[{label:"Call",sound:"jerseydevil"},{label:"Scream",sound:"bigfootscream"}]},Wi={cryptids:[pm,hm,mm]};const vm="/cryptidsoundboard/assets/bigfoothowl-55f56b60.wav",ym="/cryptidsoundboard/assets/bigfootgrowl-b1a96f3f.wav",gm="/cryptidsoundboard/assets/mothman-ad29de6e.mp3",wm="/cryptidsoundboard/assets/mothmanwingflap-13e98acd.mp3",Sm="/cryptidsoundboard/assets/jerseydevil-70828e13.mp3",km="/cryptidsoundboard/assets/bigfootscream-772c79a3.wav",Qi={bigfoothowl:vm,bigfootgrowl:ym,Mothman:gm,mothmanwingflap:wm,jerseydevil:Sm,bigfootscream:km},Vl={},Cm=e=>{Qi[e]?Vl[e]=new Audio(Qi[e]):console.error(`loadSound: invalid soundId "${e}"`)},xm=()=>{Object.keys(Qi).forEach(e=>{Vl[e]||Cm(e)})},Em=e=>{Vl[e]?Vl[e].play():console.error(`playSound: soundId not preloaded ${e}`)},_m=an.button`
   color: var(--grn-neon);
   margin: 1rem;
   background-color: hsl(323 21% 16%);
@@ -116,10 +116,10 @@ Error generating stack: `+o.message+`
       text-shadow: none;
     }
   }
-`;function _m({label:e,sound:t}){function n(){xm(t)}return Pe.jsx(Em,{onClick:n,children:e})}const Pm=an.section`
+`;function Pm({label:e,sound:t}){function n(){Em(t)}return Pe.jsx(_m,{onClick:n,children:e})}const Nm=an.section`
   flex:1;
   overflow-y: auto;
-`,Nm=an.div`
+`,zm=an.div`
   display: grid;
   justify-content: center;
   align-content: center;
@@ -128,7 +128,7 @@ Error generating stack: `+o.message+`
   @media (max-width: 768px) {
     grid-template-columns: 15rem;
   }
-`,zm=an.h1`
+`,Tm=an.h1`
   margin: 0;
   padding: 4rem 0 4rem 0;
   color: var(--grn-neon);
@@ -142,11 +142,11 @@ Error generating stack: `+o.message+`
     color: var(--blue-neon);
     text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.5), 0 0 0.5em currentcolor;
   }
-`;function Tm({cryptid:e}){return Pe.jsxs(Pm,{className:`theme-${e.theme}`,children:[Pe.jsx(zm,{children:`${e.name} Sound Board`}),Pe.jsx(Nm,{children:e.buttons.map((t,n)=>Pe.jsx(_m,{label:t.label,sound:t.sound},n))})]})}console.log(Wi);const Rm=an.div`
+`;function Rm({cryptid:e}){return Pe.jsxs(Nm,{className:`theme-${e.theme}`,children:[Pe.jsx(Tm,{children:`${e.name} Sound Board`}),Pe.jsx(zm,{children:e.buttons.map((t,n)=>Pe.jsx(Pm,{label:t.label,sound:t.sound},n))})]})}console.log(Wi);const Om=an.div`
   display: flex;
   position: absolute;
   inset: 0;
-`,Om=an.aside`
+`,$m=an.aside`
   display: flex;
   flex-direction: column;
   gap: 2rem;
@@ -154,4 +154,4 @@ Error generating stack: `+o.message+`
   border-right: white solid 2px;
   padding: 1rem;
   overflow-y: auto;
-`;function $m(){St.useEffect(()=>{Cm()},[]);const[e,t]=St.useState(0),n=Wi.cryptids[e];return Pe.jsx(Pe.Fragment,{children:Pe.jsxs(Rm,{children:[Pe.jsx(Om,{className:"cryptidBoard",children:Wi.cryptids.map((r,l)=>Pe.jsx(dm,{image:r.image,name:r.name,onClick:()=>{t(l)}},r.name))}),Pe.jsx(Tm,{cryptid:n})]})})}Yo.createRoot(document.getElementById("root")).render(Pe.jsx(Or.StrictMode,{children:Pe.jsx($m,{})}));
+`;function Lm(){St.useEffect(()=>{xm()},[]);const[e,t]=St.useState(0),n=Wi.cryptids[e];return Pe.jsx(Pe.Fragment,{children:Pe.jsxs(Om,{children:[Pe.jsx($m,{className:"cryptidBoard",children:Wi.cryptids.map((r,l)=>Pe.jsx(dm,{image:r.image,name:r.name,onClick:()=>{t(l)}},r.name))}),Pe.jsx(Rm,{cryptid:n})]})})}Yo.createRoot(document.getElementById("root")).render(Pe.jsx(Or.StrictMode,{children:Pe.jsx(Lm,{})}));
