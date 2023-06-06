@@ -38,9 +38,13 @@ const jerseydevil = {
   theme: "blue",
   buttons: [
     {
-      label: "Breath",
+      label: "Call",
       sound: "jerseydevil",
     },
+    {
+      label: "Scream",
+      sound: "bigfootscream",
+    }
   ],
 };
 

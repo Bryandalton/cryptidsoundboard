@@ -3,6 +3,7 @@ import bigfootgrowl from "./assets/sounds/bigfootgrowl.wav";
 import mothman from "./assets/sounds/Mothman.mp3";
 import mothmanwingflap from "./assets/sounds/mothmanwingflap.mp3";
 import jerseydevil from "./assets/sounds/jerseydevil.mp3";
+import bigfootscream from "./assets/sounds/bigfootscream.wav";
 
 const SoundMap = {
   bigfoothowl: bigfoothowl,
@@ -10,6 +11,7 @@ const SoundMap = {
   Mothman: mothman,
   mothmanwingflap: mothmanwingflap,
   jerseydevil: jerseydevil,
+  bigfootscream: bigfootscream,
 };
 
 const loadedSounds = {};
@@ -30,9 +32,6 @@ export const preloadAllSounds = () => {
   Object.keys(SoundMap).forEach((soundId) => {
     if (!loadedSounds[soundId]) {
       loadSound(soundId);
-    } else {
-      // sound is already loaded, we dont need to try
-      // to load it again!
     }
   });
 };
